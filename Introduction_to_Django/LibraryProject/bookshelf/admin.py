@@ -5,3 +5,5 @@ from .models import Book
 admin.site.register(Book)
 class AuthorAdmin(admin.ModelAdmin):
     pass
+class Book(admin.ModelAdmin):
+    list_filter = ["author", "publication_year"]
